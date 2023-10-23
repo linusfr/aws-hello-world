@@ -14,7 +14,9 @@ variable "db_password" {
   description = "The password for the database"
   type        = string
   sensitive   = true
-  default     = "uYDscHFCmjufN3Mddkk3FRtCiQtXwDnz"
+
+  # pass in interactively or through an env variable
+  # export TF_VAR_db_password="$(openssl rand -hex 32)"
 }
 
 # ---------------------------------------------------------------------------------------------------------------------
