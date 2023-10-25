@@ -3,7 +3,7 @@ terraform {
 
   required_providers {
     aws = {
-      source = "hashicorp/aws"
+      source  = "hashicorp/aws"
       version = "5.22.0"
     }
   }
@@ -17,7 +17,7 @@ resource "aws_launch_configuration" "example" {
   user_data = templatefile("${path.module}/user-data.sh", {
     cluster_name = var.cluster_name
     server_port  = var.server_port
-})
+  })
 
   # Required when using a launch configuration with an auto scaling group.
   lifecycle {
@@ -65,9 +65,9 @@ resource "aws_lb" "example" {
 resource "aws_lb_listener" "http" {
   load_balancer_arn = aws_lb.example.arn
 
-  port              = local.http_port
+  port = local.http_port
 
-  protocol          = "HTTP"
+  protocol = "HTTP"
 
   # By default, return a simple 404 page
   default_action {

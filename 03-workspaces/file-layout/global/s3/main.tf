@@ -3,7 +3,7 @@ terraform {
 
   required_providers {
     aws = {
-      source = "hashicorp/aws"
+      source  = "hashicorp/aws"
       version = "5.22.0"
     }
   }
@@ -60,7 +60,7 @@ resource "aws_dynamodb_table" "terraform_locks" {
 }
 
 resource "aws_instance" "example" {
-  ami           = "ami-06dd92ecc74fdfb36"
+  ami = "ami-06dd92ecc74fdfb36"
   instance_type = (
     terraform.workspace == "default" ? "t2.medium" : "t2.micro"
   )

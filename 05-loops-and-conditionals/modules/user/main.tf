@@ -1,5 +1,5 @@
 resource "aws_iam_user" "example" {
-  name  = "${var.user_name}-example"
+  name = "${var.user_name}-example"
 }
 
 resource "aws_iam_user_policy_attachment" "full_access" {
@@ -23,8 +23,8 @@ resource "aws_iam_policy" "cloudwatch_read_only" {
 
 data "aws_iam_policy_document" "cloudwatch_read_only" {
   statement {
-    effect    = "Allow"
-    actions   = [
+    effect = "Allow"
+    actions = [
       "cloudwatch:Describe*",
       "cloudwatch:Get*",
       "cloudwatch:List*"

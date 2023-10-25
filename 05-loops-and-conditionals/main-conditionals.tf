@@ -5,9 +5,9 @@
 #   enable_autoscaling = true
 # }
 
-module user {
-  source = "./modules/user"
-  user_name = "bob"
+module "user" {
+  source             = "./modules/user"
+  user_name          = "bob"
   user_rw_cloudwatch = true
 }
 

@@ -19,8 +19,8 @@ locals {
 }
 
 module "webserver_cluster" {
-  source = "../../../modules/services/webserver-cluster"
-  cluster_name           = "webserver-cluster-production"
+  source        = "../../../modules/services/webserver-cluster"
+  cluster_name  = "webserver-cluster-production"
   instance_type = "t2.micro"
   min_size      = local.min_size
   max_size      = local.max_size
@@ -28,8 +28,8 @@ module "webserver_cluster" {
 
 resource "aws_autoscaling_schedule" "scale_out_in_morning" {
   scheduled_action_name = "scale-out-during-business-hours"
-  min_size      = local.min_size
-  max_size      = local.max_size
+  min_size              = local.min_size
+  max_size              = local.max_size
   desired_capacity      = 2
   recurrence            = "0 9 * * *"
 
@@ -38,8 +38,8 @@ resource "aws_autoscaling_schedule" "scale_out_in_morning" {
 
 resource "aws_autoscaling_schedule" "scale_in_at_night" {
   scheduled_action_name = "scale-in-at-night"
-  min_size      = local.min_size
-  max_size      = local.max_size
+  min_size              = local.min_size
+  max_size              = local.max_size
   desired_capacity      = 1
   recurrence            = "0 17 * * *"
 

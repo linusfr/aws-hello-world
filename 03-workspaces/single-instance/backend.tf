@@ -3,6 +3,6 @@
 # 'terraform init -backend-config=backend.hcl'
 terraform {
   backend "s3" {
-    key            = "terraform-workspaces/terraform.tfstate"
+    key = "terraform-workspaces/terraform.tfstate"
   }
 }

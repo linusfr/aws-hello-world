@@ -1,9 +1,9 @@
 # s3-backend enabling both encryption and locking
 terraform {
   backend "s3" {
-    bucket         = "aws-hello-world-terraform-state-bucket"
-    key            = "global/s3/terraform.tfstate"
-    region         = "eu-central-1"
+    bucket = "aws-hello-world-terraform-state-bucket"
+    key    = "global/s3/terraform.tfstate"
+    region = "eu-central-1"
 
     dynamodb_table = "aws-hello-world-terraform-state-bucket-locks"
     encrypt        = true
