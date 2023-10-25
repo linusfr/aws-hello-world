@@ -11,6 +11,7 @@ This repo is solely used for learning purposes.
   - [02 - An Introduction to Terraform](https://blog.gruntwork.io/an-introduction-to-terraform-f17df9c6d180)
   - [03 - How to manage Terraform state](https://blog.gruntwork.io/how-to-manage-terraform-state-28f5697e68fa)
   - [04 - How to create reusable infrastructure with Terraform modules](https://blog.gruntwork.io/how-to-create-reusable-infrastructure-with-terraform-modules-25526d65f73d)
+  - [05 - Terraform tips & tricks: loops, if-statements, and gotchas](https://blog.gruntwork.io/terraform-tips-tricks-loops-if-statements-and-gotchas-f739bbae55f9)
 
 - [Gruntwork Module Library](https://docs.gruntwork.io/library/reference/)
 - [Terraform Module Library](https://registry.terraform.io/browse/modules)
