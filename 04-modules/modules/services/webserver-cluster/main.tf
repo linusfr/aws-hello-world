@@ -14,7 +14,10 @@ resource "aws_launch_configuration" "example" {
   instance_type   = var.instance_type
   security_groups = [aws_security_group.instance.id]
 
-  user_data = "${path.module}/user-data.sh"
+  user_data = templatefile("${path.module}/user-data.sh", {
+    cluster_name = var.cluster_name
+    server_port  = var.server_port
+})
 
   # Required when using a launch configuration with an auto scaling group.
   lifecycle {
